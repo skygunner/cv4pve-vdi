@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+using System.Collections.ObjectModel;
 using Corsinvest.ProxmoxVE.Api;
 using Corsinvest.ProxmoxVE.Vdi.Config.Models;
 using Corsinvest.ProxmoxVE.Vdi.Services;
 using Corsinvest.ProxmoxVE.Vdi.UI.Helpers;
-using System.Collections.ObjectModel;
 
 namespace Corsinvest.ProxmoxVE.Vdi.UI;
 
@@ -18,7 +18,8 @@ internal static class VmServicesWindow
     /// Returns the updated VmConfig (or the original if cancelled).
     /// </summary>
     public static async Task<VmConfig> ShowAsync(Window owner, VmConfig vmConfig, string vmName, string? userLaunchersPath,
-                                                  PveClient? client = null, string? node = null)
+                                                 PveClient? client = null, string? node = null,
+                                                 Api.Shared.Models.Vm.VmType vmType = Api.Shared.Models.Vm.VmType.Qemu)
     {
         ReapplyLanguage();
         var launchers = LauncherEngine.LoadForCurrentPlatform(userLaunchersPath);
@@ -66,7 +67,7 @@ internal static class VmServicesWindow
                     progressBar.IsVisible = true;
                     try
                     {
-                        var ip = await VmService.GetVmIpAsync(client, node, vmConfig.VmId);
+                        var ip = await VmService.GetGuestIpAsync(client, node, vmConfig.VmId, vmType);
                         if (string.IsNullOrEmpty(ip))
                         {
                             await DialogHelper.MessageAsync(owner, L("NoIpAvailable"), NotificationSeverity.Error);

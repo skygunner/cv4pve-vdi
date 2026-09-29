@@ -32,6 +32,7 @@
   <data name="ManageClusters"><value>Administrar clústeres</value></data>
   <data name="Connecting"><value>Conectando...</value></data>
   <data name="PleaseSelectHost"><value>Agregue y seleccione un host.</value></data>
+  <data name="ConfigUnreadable"><value>No se pudo leer la configuración: se cargaron los ajustes predeterminados. Se guardó una copia como {0}.</value></data>
 
   <!-- Main window -->
   <data name="Refresh"><value>Actualizar</value></data>
@@ -84,6 +85,9 @@
   <data name="SettingsWindowTitle"><value>Ajustes</value></data>
   <data name="TabAppearance"><value>Apariencia</value></data>
   <data name="ViewerNotConfigured"><value>remote-viewer no está configurado — las consolas SPICE y VNC no funcionarán.</value></data>
+  <data name="ViewerPathNotSet"><value>La ruta de remote-viewer no está configurada. Configúrala en Ajustes → Lanzadores.</value></data>
+  <data name="ViewerLaunchFailed"><value>No se pudo iniciar el proceso del viewer.</value></data>
+  <data name="ViewerVirtViewerNeedsRemote"><value>virt-viewer no puede abrir los archivos de consola de Proxmox VE y no se encontró remote-viewer en la misma carpeta. Selecciona remote-viewer en Ajustes → Lanzadores.</value></data>
   <data name="OpenSettings"><value>Abrir ajustes</value></data>
   <data name="More"><value>Más</value></data>
   <data name="DefaultView"><value>Vista</value></data>

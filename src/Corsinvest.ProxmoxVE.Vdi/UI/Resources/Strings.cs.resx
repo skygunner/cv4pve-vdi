@@ -32,6 +32,7 @@
   <data name="ManageClusters"><value>Spravovat clustery</value></data>
   <data name="Connecting"><value>Připojování...</value></data>
   <data name="PleaseSelectHost"><value>Přidejte a vyberte hostitele.</value></data>
+  <data name="ConfigUnreadable"><value>Konfiguraci nelze načíst: bylo načteno výchozí nastavení. Kopie byla uložena jako {0}.</value></data>
 
   <!-- Main window -->
   <data name="Refresh"><value>Obnovit</value></data>
@@ -84,6 +85,9 @@
   <data name="SettingsWindowTitle"><value>Nastavení</value></data>
   <data name="TabAppearance"><value>Vzhled</value></data>
   <data name="ViewerNotConfigured"><value>remote-viewer není nakonfigurován — konzole SPICE a VNC nebudou fungovat.</value></data>
+  <data name="ViewerPathNotSet"><value>Cesta k remote-viewer není nakonfigurována. Nastavte ji v Nastavení → Spouštěče.</value></data>
+  <data name="ViewerLaunchFailed"><value>Proces vieweru se nepodařilo spustit.</value></data>
+  <data name="ViewerVirtViewerNeedsRemote"><value>virt-viewer nedokáže otevřít soubory konzole Proxmox VE a remote-viewer nebyl nalezen ve stejné složce. Vyberte remote-viewer v Nastavení → Spouštěče.</value></data>
   <data name="OpenSettings"><value>Otevřít nastavení</value></data>
   <data name="More"><value>Více</value></data>
   <data name="DefaultView"><value>Zobrazení</value></data>
